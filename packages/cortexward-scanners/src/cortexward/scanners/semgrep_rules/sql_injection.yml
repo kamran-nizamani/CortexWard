@@ -11,3 +11,5 @@ rules:
       - pattern-either:
           - pattern: $CURSOR.execute(f"...{$INPUT}...")
           - pattern: $CURSOR.execute("..." + $INPUT)
+          - pattern: $CURSOR.execute("..." % $INPUT)
+          - pattern: $CURSOR.execute("...".format($INPUT, ...))
